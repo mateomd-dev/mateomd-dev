@@ -1,0 +1,18 @@
+{
+  "private": true,
+  "scripts": {
+    "build": "nuxt build",
+    "dev": "nuxt dev",
+    "generate": "nuxt generate",
+    "preview": "nuxt preview",
+    "postinstall": "nuxt prepare",
+    "deploy:wa": "mkdir .output/server/node_modules/.bin && cp -r node_modules/.bin/firebase-functions .output/server/node_modules/.bin && cp -rfu node_modules/firebase-functions/ .output/server/node_modules",
+    "deploy": "NITRO_PRESET=firebase npm run build && npm run deploy:wa && firebase deploy"
+  },
+  "devDependencies": {
+    "firebase-admin": "^11.4.1",
+    "firebase-functions": "^4.1.1",
+    "firebase-functions-test": "^3.0.0",
+    "nuxt": "3.0.0"
+  }
+}
