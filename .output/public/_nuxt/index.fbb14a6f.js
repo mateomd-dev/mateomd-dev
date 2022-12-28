@@ -1,0 +1,1 @@
+import{a as e,b as s,o as t,e as o}from"./entry.9512c960.js";const c={},n={class:"text-center"},r=o("h1",null,"In progress!",-1),_=[r];function a(d,i){return t(),s("div",n,_)}const f=e(c,[["render",a]]);export{f as default};

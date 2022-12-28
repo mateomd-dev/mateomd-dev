@@ -1,5 +1,5 @@
 {
-  "date": "2022-12-28T20:58:24.635Z",
+  "date": "2022-12-28T21:21:34.178Z",
   "preset": "firebase",
   "commands": {
     "deploy": "npx firebase deploy"
