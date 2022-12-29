@@ -2,7 +2,7 @@
     <nav class="navbar navbar-expand-sm justify-content-center">
         <div class="container justify-content-end align-items-sm-center">
             <button 
-                class="navbar-toggler shadow-none border-0 mt-2" 
+                class="navbar-toggler shadow-none border-0 pt-3 mt-1" 
                 type="button"
                 data-bs-toggle="collapse" 
                 data-bs-target="#navbarToggle" 

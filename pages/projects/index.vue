@@ -1,6 +1,6 @@
 <template> 
 	<div>
-		<h1 class="text-center mb-5">Projects</h1>
+		<h1 class="text-center display-4 mt-2 mb-5">Projects</h1>
 		<ContentList path="/projects" v-slot="{ list }">     
 				<div v-for="project in list.sort((a, b) => a.id - b.id)" :key="project._path">        
 					<h2>{{ project.title }}</h2>        

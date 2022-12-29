@@ -36,7 +36,7 @@ html, body {
 	color: var(--foreground-color-primary);
 }
 
-h2 {
+h1, h2 {
 	font-family: "PlayfairDisplay";
 	color: var(--foreground-primary-color);
 }
