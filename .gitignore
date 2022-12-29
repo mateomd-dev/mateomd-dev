@@ -6,6 +6,7 @@
 **/node_modules/*
 **/.firebaserc
 service-account.json
+**/composables/useFirebase.ts
 
 ### Firebase Patch ###
 .runtimeconfig.json

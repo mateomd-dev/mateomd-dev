@@ -4,8 +4,8 @@
 		<ContentList path="/articles" v-slot="{ list }">     
 				<div v-for="article in list" :key="article._path">        
 					<NuxtLink :to="article._path">
-						<h2 class="highlighted">{{ article.title }}</h2>        
-						<p>{{ dateTime(article.created_at) }}</p>
+						<h2 class="fw-bold">{{ article.title }}</h2>        
+						<p class="text-muted">{{ dateTime(article.created_at) }}</p>
 						<p>{{ article.description }}</p>      
 					</NuxtLink>
 				</div>    

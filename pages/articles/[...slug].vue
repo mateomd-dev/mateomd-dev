@@ -25,5 +25,18 @@ export default {
         }
     }
 }
-
 </script>
+
+<style scoped>
+a {
+	color: var(--foreground-primary-color);
+	text-decoration: none;
+}
+a:hover {
+	color: var(--primary-color);
+}
+
+.nuxt-link-exact-active {
+  background: red;
+}
+</style>

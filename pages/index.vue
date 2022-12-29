@@ -1,6 +1,7 @@
 <template>
-    <div class="text-center">
-        <h1>In progress!</h1>
-        <ContentDoc />
-    </div>
+  <div>
+    <h1>Latest Article</h1>
+  </div>
 </template>
+
+
