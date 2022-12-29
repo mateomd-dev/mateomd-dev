@@ -4,14 +4,30 @@
 		<ContentList path="/articles" v-slot="{ list }">     
 				<div v-for="article in list" :key="article._path">        
 					<NuxtLink :to="article._path">
-						<h2 class="">{{ article.title }}</h2>        
-						<p>{{ article.created_at }}</p>
+						<h2 class="highlighted">{{ article.title }}</h2>        
+						<p>{{ dateTime(article.created_at) }}</p>
 						<p>{{ article.description }}</p>      
 					</NuxtLink>
 				</div>    
 		</ContentList>  
 	</div>
 </template>
+
+<script lang="ts">
+import moment from 'moment';
+
+export default ({
+  setup() {
+    function dateTime(value: string) {
+      return moment(value).format('MMMM D, YYYY');
+    }
+
+    return { 
+		dateTime 
+	}
+  }
+})
+</script>
 
 <style scoped>
 a {

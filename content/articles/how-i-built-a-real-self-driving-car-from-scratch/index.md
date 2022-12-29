@@ -2,7 +2,7 @@
 id: 1 
 title: How I Built a Real Self-Driving Car from Scratch 
 author: mateo 
-created_at: 2022-07-11 
+created_at: 2022-11-07
 status: draft
 summary: In the summer of 2021, I developed an autopilot software from scratch and implemented it in a real car. After publishing a demo and receiving many questions about the project, I decided to share the story behind the development process. 
 ---
