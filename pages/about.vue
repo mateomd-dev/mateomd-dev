@@ -1,7 +1,7 @@
 
 <template>
 	<div>
-		<h1><strong>Hey,</strong></h1>
+		<h1 class="fw-bold">Hey,</h1>
 		<p>
 			I'm Mateo - a Computer Science student at Swansea University and I'm interested
 			basically in anything related to technology. My passion is helping
