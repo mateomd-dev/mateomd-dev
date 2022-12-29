@@ -17,7 +17,7 @@
 	--foreground-primary-color: #1e2132ff;
 	--foreground-secondary-color: #585858;
 	--primary-color: #1e2132ff;
-    --secondary-color: #678bf6ff;
+	--secondary-color: #678bf6ff;
 	--highlight-color: #87a7e6b3;
 }
 

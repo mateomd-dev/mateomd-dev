@@ -10,6 +10,7 @@
     "deploy": "NITRO_PRESET=firebase npm run build && npm run deploy:wa && firebase deploy"
   },
   "devDependencies": {
+    "@nuxt/content": "^2.3.0",
     "firebase-admin": "^11.4.1",
     "firebase-functions": "^4.1.1",
     "firebase-functions-test": "^3.0.0",
@@ -21,6 +22,7 @@
     "@fortawesome/free-regular-svg-icons": "^6.2.1",
     "@fortawesome/free-solid-svg-icons": "^6.2.1",
     "@fortawesome/vue-fontawesome": "^3.0.2",
-    "bootstrap": "^5.2.3"
+    "bootstrap": "^5.2.3",
+    "moment": "^2.29.4"
   }
 }
