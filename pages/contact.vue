@@ -1,6 +1,22 @@
 <template> 
 	<div>
-	<h1 class="text-center display-4 mt-2 mb-5">Contact</h1>
+		<h1 class="text-center display-4 mt-2 mb-3">Contact</h1>
+		<div class="d-flex justify-content-center mb-3">
+			<ul class="list-group list-group-horizontal">
+				<li class="list-group-item border-0">
+					<a href="https://medium.com/@mateomd_dev" class="icon"><font-awesome-icon :icon="['fab', 'medium']" /></a>
+				</li>
+				<li class="list-group-item border-0">
+					<a href="https://twitter.com/mateomd_dev" class="icon"><font-awesome-icon :icon="['fab', 'twitter']" /></a>
+				</li>
+				<li class="list-group-item border-0">
+					<a href="https://www.instagram.com/mateomd_dev/" class="icon"><font-awesome-icon :icon="['fab', 'instagram']" /></a>
+				</li>
+				<li class="list-group-item border-0">
+					<a href="https://github.com/mateomd-dev" class="icon"><font-awesome-icon :icon="['fab', 'github']" /></a>
+				</li>
+			</ul>
+		</div>
 		<div class="row justify-content-center">
             <form @submit.prevent="handleSubmit" class="col-7 needs-validation">
                 <div class="form-group has-validation mb-3">
@@ -71,21 +87,41 @@ export default {
 </script>
 
 <style scoped>
+.list-group-item {
+	background-color: transparent;
+}
+
+.icon {
+	color: var(--background-secondary-color);
+	font-size: 1.6rem;
+	padding: 0 0.1rem 0 0;
+	transition: .2s;
+	border: none;
+}
+
+.icon:hover {
+	color: var(--foreground-secondary-color);
+}
+
 label {
 	color: var(--background-secondary-color);
 }
+
 input, textarea {
 	background-color: var(--background-primary-color) !important;
 	color: var(--foreground-primary-color) !important;
 	border: 1px solid var(--background-secondary-color) !important;
 }
+
 .btn {
 	background-color: var(--foreground-secondary-color) !important;
 	color: var(--background-primary-color) !important;
 }
+
 .btn:hover {
 	background-color: var(--primary-color) !important;
 }
+
 .alert-success {
 	color: var(--foreground-secondary-color);
 }
