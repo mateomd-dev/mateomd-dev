@@ -59,19 +59,19 @@ li {
 }
 
 .nav-item .nav-link {
-	color: var(--foreground-color-secondary);
+	color: var(--foreground-secondary-color);
 }
 
 .nav-item .nav-link:hover {
-	color: var(--primary-color);
+	color: var(--foreground-primary-color);
 }
 
 .nav-item .nav-link.active {
-	color: var(--primary-color);
+	color: var(--foreground-primary-color);
     text-decoration: underline 2px;
 }
 
 .navbar-toggler {
-	color: var(--foreground-color-secondary);
+	color: var(--foreground-secondary-color);
 }
 </style>

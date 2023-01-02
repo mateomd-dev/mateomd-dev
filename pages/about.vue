@@ -38,7 +38,7 @@
 				<ul class="list-group">
 					<li><font-awesome-icon :icon="['fas', 'caret-right']" class="pe-2" />Linux</li>
 					<li><font-awesome-icon :icon="['fas', 'caret-right']" class="pe-2" />Bash</li>
-					<li><font-awesome-icon :icon="['fas', 'caret-right']" class="pe-2" />i3wm</li>
+					<li><font-awesome-icon :icon="['fas', 'caret-right']" class="pe-2" />Xmonad</li>
 					<li><font-awesome-icon :icon="['fas', 'caret-right']" class="pe-2" />Vim</li>
 				</ul>
 			</div>
@@ -52,7 +52,7 @@
 }
 
 .skills-list li {
-	color: var(--foreground-color-primary)
+	color: var(--foreground-primary-color)
 }
 
 h1 > strong {
