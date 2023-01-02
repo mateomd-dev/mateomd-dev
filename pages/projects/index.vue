@@ -5,10 +5,10 @@
 		<ContentList path="/projects" v-slot="{ list }">     
 				<div v-for="project in list.sort((a, b) => a.id - b.id)" :key="project._path" class="mb-3">
 					<div class="row justify-content-center">
-						<div class="col-2">
+						<div class="col-lg-2">
 							<img :src="project.img">
 						</div>
-						<div class="col-8">
+						<div class="col-lg-8 ms-md-0 ms-lg-5 ms-xl-0">
 							<h2 class="fw-bold">
 								{{ project.title }}
 								<a v-if="project.link" :href="project.link">
