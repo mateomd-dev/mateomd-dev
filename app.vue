@@ -39,6 +39,7 @@ html, body {
 	margin: 0;
 	font-size: 15px;
 	background-color: var(--background-primary-color);
+	transition: background-color 0.4s;
 }
 
 p, li {
