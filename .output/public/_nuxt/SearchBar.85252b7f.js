@@ -1,0 +1,1 @@
+import{M as o,z as n,o as s,a,I as t,b as c}from"./entry.4ba409ed.js";const r={},_={class:"btn"};function f(i,l){const e=n("font-awesome-icon");return s(),a("div",null,[t("button",_,[c(e,{icon:["fas","magnifying-glass"]})])])}const d=o(r,[["render",f]]);export{d as default};

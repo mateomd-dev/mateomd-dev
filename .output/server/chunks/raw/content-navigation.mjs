@@ -1,0 +1,5 @@
+// ROLLUP_NO_REPLACE 
+ const contentNavigation = "[{\"title\":\"Articles\",\"_path\":\"/articles\",\"children\":[{\"title\":\"How I Built a Real Self-Driving Car from Scratch\",\"_path\":\"/articles/how-i-built-a-real-self-driving-car-from-scratch\",\"children\":[{\"title\":\"How I Built a Real Self-Driving Car from Scratch\",\"_path\":\"/articles/how-i-built-a-real-self-driving-car-from-scratch\"}]}]},{\"title\":\"Projects\",\"_path\":\"/projects\",\"children\":[{\"title\":\"3D/Voxel Engine\",\"_path\":\"/projects/3d-voxel-engine\"},{\"title\":\"Effectiveness of Skip-Connections in Object Recognition\",\"_path\":\"/projects/effectivenes-of-skip-connections-in-object-recognition\"},{\"title\":\"Machine Learning Visualizer\",\"_path\":\"/projects/machine-learning-visualizer\"},{\"title\":\"MAEVE - A Real Self-Driving Car\",\"_path\":\"/projects/maeve-self-driving-car\"},{\"title\":\"Vision Pipeline for Self-Driving Cars\",\"_path\":\"/projects/vision-pipeline-for-self-driving-cars\"}]}]";
+
+export { contentNavigation as default };
+//# sourceMappingURL=content-navigation.mjs.map

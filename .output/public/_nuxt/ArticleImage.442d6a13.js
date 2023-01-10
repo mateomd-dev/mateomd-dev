@@ -1,0 +1,1 @@
+import r from"./ContentSlot.cb5f6e13.js";import{o as s,a as c,b as n}from"./entry.4ba409ed.js";import"./utils.67e7a041.js";const u={__name:"ArticleImage",props:["src"],setup(e){return(t,a)=>{const o=r;return s(),c("div",null,[n(o,{use:t.$slots.default,src:[e.src],unwrap:"img"},null,8,["use","src"])])}}};export{u as default};

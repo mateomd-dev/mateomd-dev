@@ -1,6 +1,5 @@
 import { createRenderer } from 'vue-bundle-renderer/runtime';
 import { eventHandler, getQuery, createError } from 'h3';
-import { renderToString } from 'vue/server-renderer';
 import { joinURL } from 'ufo';
 import { u as useNitroApp, a as useRuntimeConfig, g as getRouteRules } from '../nitro/firebase.mjs';
 import 'node-fetch-native/polyfill';
@@ -12,8 +11,40 @@ import 'hookable';
 import 'scule';
 import 'ohash';
 import 'unstorage';
+import 'unstorage/drivers/overlay';
+import 'unstorage/drivers/memory';
 import 'defu';
 import 'radix3';
+import 'pathe';
+import 'unified';
+import 'mdast-util-to-string';
+import 'micromark/lib/preprocess.js';
+import 'micromark/lib/postprocess.js';
+import 'unist-util-stringify-position';
+import 'micromark-util-character';
+import 'micromark-util-chunked';
+import 'micromark-util-resolve-all';
+import 'remark-emoji';
+import 'rehype-slug';
+import 'remark-squeeze-paragraphs';
+import 'rehype-external-links';
+import 'remark-gfm';
+import 'rehype-sort-attribute-values';
+import 'rehype-sort-attributes';
+import 'rehype-raw';
+import 'remark-mdc';
+import 'remark-parse';
+import 'remark-rehype';
+import 'mdast-util-to-hast';
+import 'detab';
+import 'unist-builder';
+import 'mdurl';
+import 'slugify';
+import 'unist-util-position';
+import 'html-tags';
+import 'unist-util-visit';
+import 'shiki-es';
+import 'unenv/runtime/npm/consola';
 
 function defineRenderHandler(handler) {
   return eventHandler(async (event) => {
@@ -296,29 +327,6 @@ globalThis.__buildAssetsURL = buildAssetsURL;
 globalThis.__publicAssetsURL = publicAssetsURL;
 const getClientManifest = () => import('../app/client.manifest.mjs').then((r) => r.default || r).then((r) => typeof r === "function" ? r() : r);
 const getStaticRenderedHead = () => import('../rollup/_virtual_head-static.mjs').then((r) => r.default || r);
-const getServerEntry = () => import('../app/server.mjs').then((r) => r.default || r);
-const getSSRStyles = () => import('../app/styles.mjs').then((r) => r.default || r);
-const getSSRRenderer = lazyCachedFunction(async () => {
-  const manifest = await getClientManifest();
-  if (!manifest) {
-    throw new Error("client.manifest is not available");
-  }
-  const createSSRApp = await getServerEntry();
-  if (!createSSRApp) {
-    throw new Error("Server bundle is not available");
-  }
-  const options = {
-    manifest,
-    renderToString: renderToString$1,
-    buildAssetsURL
-  };
-  const renderer = createRenderer(createSSRApp, options);
-  async function renderToString$1(input, context) {
-    const html = await renderToString(input, context);
-    return `<${appRootTag} id="${appRootId}">${html}</${appRootTag}>`;
-  }
-  return renderer;
-});
 const getSPARenderer = lazyCachedFunction(async () => {
   const manifest = await getClientManifest();
   const options = {
@@ -360,17 +368,17 @@ const renderer = defineRenderHandler(async (event) => {
     url = url.substring(0, url.lastIndexOf("/")) || "/";
     event.node.req.url = url;
   }
-  const routeOptions = getRouteRules(event);
+  getRouteRules(event);
   const ssrContext = {
     url,
     event,
     runtimeConfig: useRuntimeConfig(),
-    noSSR: !!event.node.req.headers["x-nuxt-no-ssr"] || routeOptions.ssr === false || (false),
+    noSSR: !!true   ,
     error: !!ssrError,
     nuxt: void 0,
     payload: ssrError ? { error: ssrError } : {}
   };
-  const renderer = ssrContext.noSSR ? await getSPARenderer() : await getSSRRenderer();
+  const renderer = await getSPARenderer() ;
   const _rendered = await renderer.renderToString(ssrContext).catch((error) => {
     throw !ssrError && ssrContext.payload?.error || error;
   });
@@ -383,7 +391,7 @@ const renderer = defineRenderHandler(async (event) => {
     return response2;
   }
   const renderedMeta = await ssrContext.renderMeta?.() ?? {};
-  const inlinedStyles = await renderInlineStyles(ssrContext.modules ?? ssrContext._registeredComponents ?? []) ;
+  const inlinedStyles = "";
   const htmlContext = {
     htmlAttrs: normalizeChunks([renderedMeta.htmlAttrs]),
     head: normalizeChunks([
@@ -448,18 +456,6 @@ function renderHTMLDocument(html) {
 <head>${joinTags(html.head)}</head>
 <body ${joinAttrs(html.bodyAttrs)}>${joinTags(html.bodyPrepend)}${joinTags(html.body)}${joinTags(html.bodyAppend)}</body>
 </html>`;
-}
-async function renderInlineStyles(usedModules) {
-  const styleMap = await getSSRStyles();
-  const inlinedStyles = /* @__PURE__ */ new Set();
-  for (const mod of usedModules) {
-    if (mod in styleMap) {
-      for (const style of await styleMap[mod]()) {
-        inlinedStyles.add(`<style>${style}</style>`);
-      }
-    }
-  }
-  return Array.from(inlinedStyles).join("");
 }
 function renderPayloadResponse(ssrContext) {
   return {

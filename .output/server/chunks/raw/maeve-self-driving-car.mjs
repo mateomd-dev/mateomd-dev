@@ -1,0 +1,5 @@
+// ROLLUP_NO_REPLACE 
+ const maeveSelfDrivingCar = "{\"parsed\":{\"_path\":\"/projects/maeve-self-driving-car\",\"_dir\":\"projects\",\"_draft\":false,\"_partial\":false,\"_locale\":\"en\",\"_empty\":true,\"title\":\"MAEVE - A Real Self-Driving Car\",\"description\":\"Implementation of a fully autonomous steering mechanism built in a real-size car using a deep neural network. Both software and hardware components were created from scratch, including e.g. a steering angle sensor\",\"excerpt\":{\"type\":\"root\",\"children\":[]},\"id\":1,\"link\":\"\",\"img\":\"/img/projects/thumbnails/maeve.png\",\"body\":{\"type\":\"root\",\"children\":[],\"toc\":{\"title\":\"\",\"searchDepth\":2,\"depth\":2,\"links\":[]}},\"_type\":\"markdown\",\"_id\":\"content:projects:maeve-self-driving-car.md\",\"_source\":\"content\",\"_file\":\"projects/maeve-self-driving-car.md\",\"_extension\":\"md\"},\"hash\":\"spr0rqByLQ\"}";
+
+export { maeveSelfDrivingCar as default };
+//# sourceMappingURL=maeve-self-driving-car.mjs.map

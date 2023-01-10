@@ -1,0 +1,5 @@
+// ROLLUP_NO_REPLACE 
+ const machineLearningVisualizer = "{\"parsed\":{\"_path\":\"/projects/machine-learning-visualizer\",\"_dir\":\"projects\",\"_draft\":false,\"_partial\":false,\"_locale\":\"en\",\"_empty\":true,\"title\":\"Machine Learning Visualizer\",\"description\":\"Web application for visualizing the computation process of various algorithms from machine learning and optimization. This project also servers as a learning tool, as it is based on the syllabus of the ML module at Swansea University.\",\"excerpt\":{\"type\":\"root\",\"children\":[]},\"id\":3,\"link\":\"\",\"img\":\"/img/projects/thumbnails/machine-learning-visualizer.png\",\"body\":{\"type\":\"root\",\"children\":[],\"toc\":{\"title\":\"\",\"searchDepth\":2,\"depth\":2,\"links\":[]}},\"_type\":\"markdown\",\"_id\":\"content:projects:machine-learning-visualizer.md\",\"_source\":\"content\",\"_file\":\"projects/machine-learning-visualizer.md\",\"_extension\":\"md\"},\"hash\":\"YYCjvFY8O8\"}";
+
+export { machineLearningVisualizer as default };
+//# sourceMappingURL=machine-learning-visualizer.mjs.map
